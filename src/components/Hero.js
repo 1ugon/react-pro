@@ -1,5 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
+
+import { breakAt, BreakpointSize } from "./Breakpoints";
+
+const colorYellow = "#ffc107";
 
 const Root = styled.div`
   color: #fff;
@@ -14,8 +19,26 @@ const Root = styled.div`
 `;
 
 const Title = styled.h1`
+  position: relative;
   font-weight: 700;
   letter-spacing: 2px;
+  margin-bottom: 25;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: ${colorYellow};
+    height: 5px;
+    width: 70px;
+  }
+
+  strong {
+    color: ${colorYellow};
+  }
 `;
 
 const Content = styled.div`
@@ -30,8 +53,11 @@ const Content = styled.div`
     padding-left: 0%;
   }
 
-  li:before {
-    content: "\\2713\\0020";
+  li {
+    &::before {
+      content: "\\2713\\0020";
+      color: ${colorYellow};
+    }
   }
 `;
 
@@ -39,11 +65,11 @@ const Container = styled.div`
   width: 100%;
   padding: 0 8px;
 
-  @media (min-width: 768px) {
+  ${breakAt(BreakpointSize.sm)} {
     padding: 0 16px;
   }
 
-  @media (min-width: 1200px) {
+  ${breakAt(BreakpointSize.lg)} {
     width: 1140px;
     margin: 0 auto;
   }
@@ -57,5 +83,11 @@ const Hero = ({ image, title, children }) => (
     </Container>
   </Root>
 );
+
+Hero.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  children: PropTypes.node,
+};
 
 export default Hero;

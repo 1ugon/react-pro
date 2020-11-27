@@ -11,7 +11,17 @@ export default {
 };
 
 export const usage = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir" image={Volks}>
+  <Hero
+    title={
+      <span>
+        Ganhe sua <strong>liberdade</strong>
+        <br /> para ir e vir
+      </span>
+    }
+    e
+    vir
+    image={Volks}
+  >
     <ul>
       <li>A auto escola lider em aprovacao</li>
       <li>A auto escola lider em aprovacao 2</li>
