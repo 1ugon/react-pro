@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Heading",
+  title: "Components/Heading",
   component: Heading,
 };
 
