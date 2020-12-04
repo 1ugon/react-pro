@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import Cuba from "../stories/assets/cuba.jpg";
 import Volks from "../stories/assets/volks.png";
 import Heading from "./Heading";
+import Button from "./Button";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -34,5 +35,8 @@ export const withList = () => (
       <li>A auto escola lider em aprovacao 2</li>
       <li>A auto escola lider em aprovacao 3</li>
     </ul>
+    <Button color="primary" variant="outlined">
+      Matricule-se agora
+    </Button>
   </Hero>
 );
