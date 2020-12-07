@@ -2,14 +2,14 @@ import React from "react";
 import { text } from "@storybook/addon-knobs";
 
 import Hero from "./Hero";
-import Cuba from "../stories/assets/cuba.jpg";
-import Volks from "../stories/assets/volks.png";
-import Heading from "./Heading";
-import Button from "./Button";
+import Cuba from "../../stories/assets/cuba.jpg";
+import Volks from "../../stories/assets/volks.png";
+import Heading from "../atoms/Heading";
+import Button from "../atoms/Button";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Components/Hero",
+  title: "Components/Molecules/Hero",
   component: Hero,
 };
 
