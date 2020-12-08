@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 import { breakAt, BreakpointSizes } from "../../styles/Breakpoints";
 
 const breakColumnAt = (size) => (props) =>
-props[size] &&
-css`
-  ${breakAt(BreakpointSizes[size])} {
-    grid-template-columns: repeat(${(props) => props.[size]}, 1fr);
-  }
-`
+  props[size] &&
+  css`
+    ${breakAt(BreakpointSizes[size])} {
+      grid-template-columns: repeat(${(props) => props[size]}, 1fr);
+    }
+  `;
 
 const Grid = styled.div`
   display: grid;
