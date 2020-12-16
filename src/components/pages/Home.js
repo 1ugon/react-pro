@@ -9,9 +9,48 @@ import Grid from "../atoms/Grid";
 import Feature from "../atoms/Feature";
 import Section from "../molecules/Section";
 import Footer from "../organisms/Footer";
+import ProductGrid from "../organisms/ProductGrid";
 
 import Cuba from "../../assets/cuba.jpg";
+import Carro from "../../assets/carro.jpg";
+import Moto1 from "../../assets/moto1.jpg";
+import Moto2 from "../../assets/moto2.jpg";
+import Caminhao from "../../assets/caminhao.jpg";
+import Aula from "../../assets/aula.jpg";
 import Forest from "../../assets/forest.mp4";
+
+const products = [
+  {
+    id: 1,
+    title: "1ª Habilitação Carro e Moto",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: Carro,
+  },
+  {
+    id: 2,
+    title: "1ª Habilitação Carro",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: Moto1,
+  },
+  {
+    id: 3,
+    title: "1ª Habilitação Moto",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: Moto2,
+  },
+  {
+    id: 4,
+    title: "Mudança de Categoria Caminhão",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: Caminhao,
+  },
+  {
+    id: 5,
+    title: "Aulas Avulsas",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: Aula,
+  },
+];
 
 const Home = () => (
   <>
@@ -27,23 +66,17 @@ const Home = () => (
         <li>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
           porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-          viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-          tellus, consectetur ullamcorper iaculis fermentum, tristique ut odio.
+          pulvinar.
         </li>
         <li>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
           porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-          viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-          tellus, consectetur ullamcorper iaculis fermentum, tristique ut odio.
+          pulvinar.
         </li>
         <li>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
           porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-          viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-          tellus, consectetur ullamcorper iaculis fermentum, tristique ut odio.
+          pulvinar.
         </li>
       </ul>
       <Button color="primary" variant="outlined">
@@ -56,40 +89,28 @@ const Home = () => (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </Feature>
         <Feature icon={<FaKey />} title="Habilitacao mais rapida">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </Feature>
         <Feature icon={<FaMapMarkedAlt />} title="Excelente localizacao">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </Feature>
         <Feature icon={<FaAccessibleIcon />} title="Acessibilidade">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </Feature>
       </Grid>
@@ -97,6 +118,7 @@ const Home = () => (
     <Section inverse>
       <Heading>
         <h2>Conheca nossos servicos</h2>
+        <ProductGrid products={products} />
       </Heading>
     </Section>
     <Section>
@@ -108,10 +130,7 @@ const Home = () => (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
           <div>
             <Button color="primary">Saiba mais</Button>

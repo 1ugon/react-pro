@@ -48,10 +48,7 @@ const Footer = () => (
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </div>
         <div>
@@ -70,10 +67,7 @@ const Footer = () => (
             </IconContainer>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar. Aenean dignissim, eros id semper euismod, libero turpis
-            viverra nisi, rutrum faucibus mauris neque eu urna. Suspendisse sem
-            tellus, consectetur ullamcorper iaculis fermentum, tristique ut
-            odio.
+            pulvinar.
           </p>
         </div>
         <div>
@@ -81,7 +75,7 @@ const Footer = () => (
             <h6>Redes Sociais</h6>
           </Heading>
           <p>
-            <FooterLink target="_blank" href="">
+            <FooterLink target="" href="#">
               <IconContainer>
                 <FaFacebookF />
               </IconContainer>
@@ -89,7 +83,7 @@ const Footer = () => (
             </FooterLink>
           </p>
           <p>
-            <FooterLink target="_blank" href="">
+            <FooterLink target="" href="#">
               <IconContainer>
                 <FaLinkedinIn />
               </IconContainer>
@@ -97,7 +91,7 @@ const Footer = () => (
             </FooterLink>
           </p>
           <p>
-            <FooterLink target="_blank" href="">
+            <FooterLink target="" href="#">
               <IconContainer>
                 <FaTwitter />
               </IconContainer>
