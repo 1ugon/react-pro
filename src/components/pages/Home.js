@@ -2,13 +2,13 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 
-import Hero from "../../components/molecules/Hero";
-import Heading from "../../components/atoms/Heading";
-import Button from "../../components/atoms/Button";
-import Grid from "../../components/atoms/Grid";
-import Feature from "../../components/atoms/Feature";
-import Section from "../../components/molecules/Section";
-import Footer from "../../components/organisms/Footer";
+import Hero from "../molecules/Hero";
+import Heading from "../atoms/Heading";
+import Button from "../atoms/Button";
+import Grid from "../atoms/Grid";
+import Feature from "../atoms/Feature";
+import Section from "../molecules/Section";
+import Footer from "../organisms/Footer";
 
 import Cuba from "../../assets/cuba.jpg";
 import Forest from "../../assets/forest.mp4";

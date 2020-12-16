@@ -8,9 +8,9 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-import Container from "../../components/atoms/Container";
-import Grid from "../../components/atoms/Grid";
-import Heading from "../../components/atoms/Heading";
+import Container from "../atoms/Container";
+import Grid from "../atoms/Grid";
+import Heading from "../atoms/Heading";
 
 const Root = styled.footer`
   background-color: #2a2a2a;
