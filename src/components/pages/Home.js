@@ -10,8 +10,8 @@ import Feature from "../atoms/Feature";
 import Section from "../molecules/Section";
 import Footer from "../organisms/Footer";
 import ProductGrid from "../organisms/ProductGrid";
-import Accordion from "../atoms/Accordion";
-import AccordionGroup from "../atoms/AccordionGroup";
+import Accordion from "../atoms/Accordion/Accordion";
+import AccordionGroup from "../atoms/Accordion/AccordionGroup";
 
 import Cuba from "../../assets/cuba.jpg";
 import Carro from "../../assets/carro.jpg";
