@@ -7,6 +7,7 @@ import Button from "../atoms/Button";
 
 import Lambo from "../../assets/lambo.jpg";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Atoms/Card",
   component: Card,

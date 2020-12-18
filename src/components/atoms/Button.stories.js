@@ -3,6 +3,7 @@ import { actions } from "@storybook/addon-actions";
 import Button from "./Button";
 import styled from "styled-components";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Atoms/Button",
   component: Button,

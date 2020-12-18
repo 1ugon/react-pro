@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Grid from "./Grid";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Atoms/Grid",
   component: Grid,

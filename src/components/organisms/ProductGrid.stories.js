@@ -3,6 +3,7 @@ import React from "react";
 import ProductGrid from "./ProductGrid";
 import PlaceholderImage from "../../stories/assets/mercedes.jpg";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Organisms/ProductGrid",
   component: ProductGrid,

@@ -10,6 +10,8 @@ import Feature from "../atoms/Feature";
 import Section from "../molecules/Section";
 import Footer from "../organisms/Footer";
 import ProductGrid from "../organisms/ProductGrid";
+import Accordion from "../atoms/Accordion";
+import AccordionGroup from "../atoms/AccordionGroup";
 
 import Cuba from "../../assets/cuba.jpg";
 import Carro from "../../assets/carro.jpg";
@@ -145,6 +147,23 @@ const Home = () => (
       <Heading>
         <h2>Duvidas Recorrentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="Como eu renovo minha CNH?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+          pulvinar.
+        </Accordion>
+        <Accordion title="Como faço a mudança de categoria?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+          pulvinar.
+        </Accordion>
+        <Accordion title="Fui multado, e agora?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+          pulvinar.
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>

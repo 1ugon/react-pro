@@ -4,6 +4,7 @@ import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import Feature from "./Feature";
 import Grid from "./Grid";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Atoms/Feature",
   component: Feature,
