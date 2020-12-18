@@ -119,7 +119,7 @@ const Home = () => (
     </Section>
     <Section inverse>
       <Heading>
-        <h2>Conheca nossos servicos</h2>
+        <h2>Conheça nossos serviços</h2>
         <ProductGrid products={products} />
       </Heading>
     </Section>
@@ -145,7 +145,7 @@ const Home = () => (
     </Section>
     <Section inverse>
       <Heading>
-        <h2>Duvidas Recorrentes</h2>
+        <h2>Dúvidas Recorrentes</h2>
       </Heading>
       <AccordionGroup>
         <Accordion title="Como eu renovo minha CNH?">
