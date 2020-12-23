@@ -1,6 +1,6 @@
 # React Pro
 
-## Learning React / Aprendendo React
+Made it for estudies purposes in React / Feito com propósitos de estudos no React
 
 Este projeto foi desenvolvido durante o curso [React Profissional](https://nardiniacademy.com/)
 
