@@ -7,6 +7,7 @@ import Section from "../molecules/Section";
 import Grid from "../atoms/Grid";
 import Footer from "../organisms/Footer";
 import Card, { CardMedia, CardMediaDescription } from "../atoms/Card";
+import BreadCrumb from "../atoms/BreadCrumb";
 
 import Cuba from "../../assets/cuba.jpg";
 import AboutImg from "../../svg/about.svg";
@@ -70,6 +71,9 @@ const About = () => {
         <Heading>
           <h1>Auto Escola</h1>
         </Heading>
+        <BreadCrumb
+          items={[{ label: "Início", link: "/" }, { label: "Sobre" }]}
+        />
       </Hero>
       <Section>
         <Grid md={2}>
