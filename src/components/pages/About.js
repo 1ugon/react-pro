@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
+
+import { useScrollToTop } from "../../hooks/scroll";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -57,13 +59,7 @@ const instructors = [
 ];
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  useScrollToTop();
 
   return (
     <>
@@ -110,7 +106,7 @@ const About = () => {
             <center>
               <Image
                 src={AboutImg}
-                alt="Imagem de um prédio com alguns carros passando em frente"
+                alt="Um prédio com alguns carros passando em frente"
               />
             </center>
           </div>
