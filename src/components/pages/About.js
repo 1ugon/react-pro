@@ -60,7 +60,7 @@ const About = () => (
   <>
     <Hero image={Cuba}>
       <Heading>
-        <h1>Auto Escola Gokinho</h1>
+        <h1>Auto Escola</h1>
       </Heading>
     </Hero>
     <Section>

@@ -127,7 +127,7 @@ const Home = () => (
       <Grid md={2}>
         <div>
           <Heading>
-            <h2>Nardini Auto Escola</h2>
+            <h2>Auto Escola</h2>
           </Heading>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi

@@ -43,7 +43,7 @@ const Footer = () => (
       <Grid md={3}>
         <div>
           <Heading>
-            <h6>Nardini Auto Escola</h6>
+            <h6>Auto Escola</h6>
           </Heading>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
