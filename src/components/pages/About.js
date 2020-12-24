@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -56,93 +56,103 @@ const instructors = [
   },
 ];
 
-const About = () => (
-  <>
-    <Hero image={Cuba}>
-      <Heading>
-        <h1>Auto Escola</h1>
-      </Heading>
-    </Hero>
-    <Section>
-      <Grid md={2}>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          </ul>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-          <center>
-            <Image
-              src={AboutImg}
-              alt="Imagem de um prédio com alguns carros passando em frente"
-            />
-          </center>
-        </div>
-      </Grid>
-    </Section>
-    <Section inverse>
-      <Grid md={2}>
-        <div>
-          <h4>Missão</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-        </div>
-        <div>
-          <h4>Visão</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-            pulvinar.
-          </p>
-        </div>
-      </Grid>
-    </Section>
-    <Section>
-      <Heading>
-        <h2>Conheça nossos professores</h2>
-      </Heading>
-      <Grid sm={2} md={3} lg={4}>
-        {instructors.map((instructor) => (
-          <Card key={instructor.id}>
-            <CardMedia image={instructor.avatar}>
-              <CardMediaDescription>
-                <h5>{instructor.name}</h5>
-              </CardMediaDescription>
-            </CardMedia>
-          </Card>
-        ))}
-      </Grid>
-    </Section>
-    <Footer />
-  </>
-);
+const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+  return (
+    <>
+      <Hero image={Cuba}>
+        <Heading>
+          <h1>Auto Escola</h1>
+        </Heading>
+      </Hero>
+      <Section>
+        <Grid md={2}>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+            <center>
+              <Image
+                src={AboutImg}
+                alt="Imagem de um prédio com alguns carros passando em frente"
+              />
+            </center>
+          </div>
+        </Grid>
+      </Section>
+      <Section inverse>
+        <Grid md={2}>
+          <div>
+            <h4>Missão</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+          </div>
+          <div>
+            <h4>Visão</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+              pulvinar.
+            </p>
+          </div>
+        </Grid>
+      </Section>
+      <Section>
+        <Heading>
+          <h2>Conheça nossos professores</h2>
+        </Heading>
+        <Grid sm={2} md={3} lg={4}>
+          {instructors.map((instructor) => (
+            <Card key={instructor.id}>
+              <CardMedia image={instructor.avatar}>
+                <CardMediaDescription>
+                  <h5>{instructor.name}</h5>
+                </CardMediaDescription>
+              </CardMedia>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+      <Footer />
+    </>
+  );
+};
 
 About.defaultProps = {};
 
