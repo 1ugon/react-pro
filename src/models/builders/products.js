@@ -1,21 +1,17 @@
-const faker = require("faker");
+// import faker from "faker";
 
-// import Car from "../../stories/assets/mercedes.jpg";
+import CarPlaceholder from "../../stories/assets/mercedes.jpg";
+import products from "./fixtures/products.json";
 
-const buildProductList = (size) => {
+export const buildProductList = (size) => {
   const result = [];
 
   for (let i = 0; i < size; i += 1) {
     result.push({
-      id: i + 1,
-      image: "",
-      title: faker.commerce.productName(),
-      slang: faker.lorem.slug(),
-      summary: faker.commerce.productDescription(),
+      ...products[i],
+      image: CarPlaceholder,
     });
   }
 
   return result;
 };
-
-console.log(JSON.stringify(buildProductList(8), null, "  "));
