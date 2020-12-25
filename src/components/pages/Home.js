@@ -1,7 +1,9 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+import ProductType from "../../models/types/ProductType";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -15,47 +17,9 @@ import Accordion from "../atoms/Accordion/Accordion";
 import AccordionGroup from "../atoms/Accordion/AccordionGroup";
 
 import Cuba from "../../assets/cuba.jpg";
-import Carro from "../../assets/carro.jpg";
-import Moto1 from "../../assets/moto1.jpg";
-import Moto2 from "../../assets/moto2.jpg";
-import Caminhao from "../../assets/caminhao.jpg";
-import Aula from "../../assets/aula.jpg";
 import Forest from "../../assets/forest.mp4";
 
-const products = [
-  {
-    id: 1,
-    title: "1ª Habilitação Carro e Moto",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: Carro,
-  },
-  {
-    id: 2,
-    title: "1ª Habilitação Carro",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: Moto1,
-  },
-  {
-    id: 3,
-    title: "1ª Habilitação Moto",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: Moto2,
-  },
-  {
-    id: 4,
-    title: "Mudança de Categoria Caminhão",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: Caminhao,
-  },
-  {
-    id: 5,
-    title: "Aulas Avulsas",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: Aula,
-  },
-];
-
-const Home = () => (
+const Home = ({ products }) => (
   <>
     <Hero image={Cuba}>
       <Heading>
@@ -172,8 +136,12 @@ const Home = () => (
   </>
 );
 
-// Home.defaultProps = {};
+Home.defaultProps = {
+  products: [],
+};
 
-// Home.propTypes = {};
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductType),
+};
 
 export default Home;

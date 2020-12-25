@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
-import { useScrollToTop } from "../../hooks/scroll";
+import ProductType from "../../models/types/ProductType";
 
 import Hero from "../molecules/Hero";
 import Heading from "../atoms/Heading";
@@ -38,81 +38,79 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
-  useScrollToTop();
-  return (
-    <>
-      <Hero image={Cuba}>
-        <Heading>
-          <h1>Nome do serviço</h1>
-        </Heading>
-        <BreadCrumb
-          items={[
-            { label: "Início", link: "/" },
-            { label: "Serviços" },
-            { label: "Nome do Serviço" },
-          ]}
-        />
-      </Hero>
-      <Section>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-          porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-          pulvinar.
-        </p>
-        <h5>Documentos necessários:</h5>
-        <PinnedList>
-          <PinnedItem>
-            <FaIdCard />
-            RG
-          </PinnedItem>
-          <PinnedItem>
-            <FaIdCard />
-            CPF
-          </PinnedItem>
-          <PinnedItem>
-            <FaScroll />
-            Certidão de nascimento ou casamento
-          </PinnedItem>
-          <PinnedItem>
-            <FaHome />
-            Comprovante de residência
-          </PinnedItem>
-        </PinnedList>
-      </Section>
-      <Section inverse>
-        <Callout>
-          <CalloutBody>
-            <h6>Faça sua matrícula agora mesmo</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
-              pulvinar.
-            </p>
-            <CalloutActions>
-              <Button color="primary">Matricular</Button>
-            </CalloutActions>
-          </CalloutBody>
-          <Image src={Speed} alt="Pessoa apontando para um velocimetro" />
-        </Callout>
-      </Section>
-      <Footer />
-    </>
-  );
+const ProductDetail = ({ product }) => (
+  <>
+    <Hero image={Cuba}>
+      <Heading>
+        <h1>{product.title}</h1>
+      </Heading>
+      <BreadCrumb
+        items={[
+          { label: "Início", link: "/" },
+          { label: "Serviços" },
+          { label: product.title },
+        ]}
+      />
+    </Hero>
+    <Section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor
+        mauris sit amet est efficitur, imperdiet rhoncus purus pulvinar.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor
+        mauris sit amet est efficitur, imperdiet rhoncus purus pulvinar.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor
+        mauris sit amet est efficitur, imperdiet rhoncus purus pulvinar.
+      </p>
+      <h5>Documentos necessários:</h5>
+      <PinnedList>
+        <PinnedItem>
+          <FaIdCard />
+          RG
+        </PinnedItem>
+        <PinnedItem>
+          <FaIdCard />
+          CPF
+        </PinnedItem>
+        <PinnedItem>
+          <FaScroll />
+          Certidão de nascimento ou casamento
+        </PinnedItem>
+        <PinnedItem>
+          <FaHome />
+          Comprovante de residência
+        </PinnedItem>
+      </PinnedList>
+    </Section>
+    <Section inverse>
+      <Callout>
+        <CalloutBody>
+          <h6>Faça sua matrícula agora mesmo</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            porttitor mauris sit amet est efficitur, imperdiet rhoncus purus
+            pulvinar.
+          </p>
+          <CalloutActions>
+            <Button color="primary">Matricular</Button>
+          </CalloutActions>
+        </CalloutBody>
+        <Image src={Speed} alt="Pessoa apontando para um velocimetro" />
+      </Callout>
+    </Section>
+    <Footer />
+  </>
+);
+
+ProductDetail.defaultProps = {
+  product: {},
 };
 
-ProductDetail.defaultProps = {};
-
-ProductDetail.propTypes = {};
+ProductDetail.propTypes = {
+  product: ProductType,
+};
 
 export default ProductDetail;

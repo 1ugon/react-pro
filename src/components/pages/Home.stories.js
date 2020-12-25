@@ -2,10 +2,14 @@ import React from "react";
 
 import Home from "./Home";
 
+import { buildProductList } from "../../models/builders/products";
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: "Components/Pages/Home",
   component: Home,
 };
 
-export const usage = () => <Home />;
+const products = buildProductList(8);
+
+export const usage = () => <Home products={products} />;
