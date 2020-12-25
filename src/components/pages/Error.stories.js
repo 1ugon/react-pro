@@ -7,4 +7,9 @@ export default {
   component: Error,
 };
 
-export const usage = () => <Error />;
+export const usage = () => (
+  <Error
+    title="Página não encontrada"
+    description="Ops! Essa página foi abduzida"
+  />
+);
