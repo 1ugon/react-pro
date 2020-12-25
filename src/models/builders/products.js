@@ -1,14 +1,14 @@
+import Car from "../../stories/assets/mercedes.jpg";
+
 const faker = require("faker");
 
-// import Car from "../../stories/assets/mercedes.jpg";
-
-const buildProductList = (size) => {
+export const buildProductList = (size) => {
   const result = [];
 
   for (let i = 0; i < size; i += 1) {
     result.push({
       id: i + 1,
-      image: "",
+      image: Car,
       title: faker.commerce.productName(),
       slang: faker.lorem.slug(),
       summary: faker.commerce.productDescription(),
@@ -18,4 +18,4 @@ const buildProductList = (size) => {
   return result;
 };
 
-console.log(JSON.stringify(buildProductList(8), null, "  "));
+export const buildProduct = () => buildProductList(1)[0];
