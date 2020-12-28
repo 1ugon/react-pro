@@ -1,17 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Section from "../molecules/Section";
 import Grid from "../atoms/Grid";
 import Heading from "../atoms/Heading";
+import Button from "../atoms/Button";
 
 import Taken from "../../svg/taken.svg";
 
 const Image = styled.img`
   width: 100%;
   height: auto;
-  max-width: 200px;
+  max-width: 400px;
+`;
+
+const ErrorTitle = styled.h1`
+  margin-top: 0;
+`;
+
+const ErrorDescription = styled.p`
+  margin: 24px 0;
+  font-size: 1.2rem;
 `;
 
 const Error = ({ title, description }) => (
@@ -19,9 +30,14 @@ const Error = ({ title, description }) => (
     <Grid sm={2}>
       <div>
         <Heading>
-          <h1>{title}</h1>
+          <ErrorTitle>{title}</ErrorTitle>
         </Heading>
-        <p>{description}</p>
+        <ErrorDescription>{description}</ErrorDescription>
+        <div>
+          <Button as={Link} to="/" color="primary">
+            Ir para página inicial
+          </Button>
+        </div>
       </div>
       <div>
         <Image
