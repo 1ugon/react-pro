@@ -1,6 +1,6 @@
 # React Pro
-## EN
-Made it for estudies purposes in React
+
+Made it in React for estudies purposes
 
 **[Online demonstration](https://react-pro-one.vercel.app/)**
 
